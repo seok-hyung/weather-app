@@ -8,6 +8,7 @@ import { WeatherBox } from '@/components/weather-box'
 import { cityNamesConverter } from '@/lib/utils'
 import { WeatherResponse } from '@/types/weather'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const cities = [
   '서울',
@@ -95,6 +96,18 @@ export default function Home() {
       <WeatherBox isLoading={isLoading}>
         <DailyWeather data={data} />
       </WeatherBox>
+
+      <div className="mt-10 mb-20">
+        <h2 className="text-3xl mb-4">사용한 날씨 API</h2>
+        <Link href={'https://openweathermap.org/'} target="_blank">
+          <div className="flex">
+            <div className="-mr-12">
+              <Image src="/api-logo.png" width={100} height={100} alt="api logo" />
+            </div>
+            <p className="text-xl">OpenWeatherMap </p>
+          </div>
+        </Link>
+      </div>
 
       {/* 모달 UI */}
       {isModalOpen && (
