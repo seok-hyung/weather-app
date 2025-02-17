@@ -6,7 +6,7 @@ type LocationValue = {
 }
 export const useLocationValue = create<LocationValue>((set) => ({
   location: { lat: 37.51423056, lon: 126.8687083 },
-  setLocation: (value: any) =>
+  setLocation: (value) =>
     set({
       location: value,
     }),
