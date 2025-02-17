@@ -5,6 +5,7 @@ import ReactQueryProvider from '@/provider/react-query-provider'
 import { Toaster } from 'react-hot-toast'
 const notoSansKr = Noto_Sans_KR({
   weight: ['100', '300', '400', '500', '600', '700', '900'],
+  subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic'],
 })
 
 export const metadata: Metadata = {
